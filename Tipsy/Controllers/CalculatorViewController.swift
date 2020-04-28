@@ -45,8 +45,8 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        textTyped = billTextField.text ?? "123.56"
-        totalPerPerson = (Double(textTyped) ?? 0.0) * (1 + tipRatio) / Double(splitNumber)
+        textTyped = billTextField.text ?? ""
+        totalPerPerson = (Double(textTyped) ?? 123.56) * (1 + tipRatio) / Double(splitNumber)
         self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     
